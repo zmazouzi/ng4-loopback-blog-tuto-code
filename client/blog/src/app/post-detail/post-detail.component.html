@@ -1,0 +1,17 @@
+
+
+
+
+<ul class="nav nav-tabs">
+  <li  ><a >View</a></li>
+  <li ><a [routerLink]="['/blog', post.id, 'edit']" >Edit</a></li>
+  <li ><a >Delete</a></li>
+</ul>
+
+
+<article class="post">
+  <h2> {{post.title}}</h2>
+  <div class="post-content">
+    {{post.body}}
+  </div>
+</article>

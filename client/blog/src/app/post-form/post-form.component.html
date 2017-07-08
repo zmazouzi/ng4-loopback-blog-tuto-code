@@ -1,0 +1,19 @@
+
+<ul class="nav nav-tabs">
+  <li  ><a >View</a></li>
+  <li ><a [routerLink]="['/blog', post.id, 'edit']">Edit</a></li>
+  <li ><a >Delete</a></li>
+</ul>
+
+
+
+<form (submit)="onSubmit()">  <div class="form-group">
+  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">{{errorMessage}}</div>
+    <input  [(ngModel)]="post.title" type="text" name="title" class="form-control" placeholder="title"><br>
+    <input [(ngModel)]="post.body" type="text" name="body" class="form-control" placeholder="body">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+
+</form>
+
+
